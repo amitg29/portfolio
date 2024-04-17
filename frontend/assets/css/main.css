@@ -1,0 +1,22 @@
+* {
+    box-sizing:border-box;
+}
+
+body {
+    /* background: linear-gradient(to right, #111111, #0f3443); */
+    background-color: #111111;
+    color: #ececec;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: aquamarine;
+}
+
+::-webkit-scrollbar-thumb {
+    /* background: #4b286d; */
+    background: #0e658c;
+    border-radius: 5px;
+    height: 5px;
+}
