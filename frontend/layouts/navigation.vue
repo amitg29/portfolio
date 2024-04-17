@@ -2,7 +2,8 @@
     <nav class="nav">
         <ul>
             <li v-for="item in navList" :key="item.to" style="list-style: none;">
-                <NuxtLink :to="item.to">{{ item.title }}</NuxtLink>
+                <!-- <NuxtLink :to="item.to">{{ item.title }}</NuxtLink> -->
+                <button class="nav-item" @click="redirect(item.to)">{{ item.title }}</button>
             </li>
         </ul>
     </nav>
@@ -40,6 +41,11 @@ export default {
                 }
             ],
         }
+    },
+    methods: {
+        redirect(link) {
+            this.$router.push(link)
+        }
     }
 }
 </script>
@@ -52,7 +58,7 @@ export default {
     z-index: 2;
 }
 
-.nav>ul>li {
+.nav-item {
     /* display: inline-block; */
     min-width: 80px;
     padding: 10px;
